@@ -7,7 +7,7 @@ from viewer import *
 def main():
     cv2.namedWindow("origin", cv2.WINDOW_NORMAL)
     test = cv2.imread("images/test.bmp")
-
+    viewimage(test)
 
 if __name__ == '__main__':
     main()

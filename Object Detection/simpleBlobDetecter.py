@@ -20,7 +20,8 @@ cnt, labels, stats, centroids = cv2.connectedComponentsWithStats(src_bin)
 
 dst = cv2.cvtColor(src, cv2.COLOR_GRAY2BGR)
 
-for i in range(1, cnt): # 각각의 객체 정보에 들어가기 위해 반복문. 범위를 1부터 시작한 이유는 배경을 제외
+# 각각의 객체 정보에 들어가기 위해 반복문. 범위를 1부터 시작한 이유는 배경을 제외
+for i in range(1, cnt):
     (x, y, w, h, area) = stats[i]
 
     # 필터링
