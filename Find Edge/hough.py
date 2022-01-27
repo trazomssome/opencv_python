@@ -8,7 +8,7 @@ imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 edges = cv2.Canny(imgray, 50, 200 )
 
 # 확율 허프 변환 적용 ---②
-lines = cv2.HoughLinesP(edges, 1, np.pi/180, 10, None, 20, 2)
+lines = cv2.HoughLinesP(edges, 1, np.pi/180, 10, None, 200, 2)
 for line in lines:
     # 검출된 선 그리기 ---③
     x1, y1, x2, y2 = line[0]
