@@ -16,6 +16,7 @@ for x, y in coord:
 
 # 변화량을 영상으로 표현하기 위해서 0~255로 정규화 ---④
 corner_norm = cv2.normalize(corner, None, 0, 255, cv2.NORM_MINMAX, cv2.CV_8U)
+
 # 화면에 출력
 corner_norm = cv2.cvtColor(corner_norm, cv2.COLOR_GRAY2BGR)
 merged = np.hstack((corner_norm, img))
