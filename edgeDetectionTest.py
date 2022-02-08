@@ -1,5 +1,4 @@
 import cv2
-import time
 import numpy as np
 
 img = cv2.imread('images/test.bmp')
@@ -10,7 +9,6 @@ imgray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 firstValue = (-1,-1)
 endValue = (0,0)
 
-start = time.time()
 for row in range(0, 399, 50):
     for column in range (200, 300):
         #imgray[column,row]
